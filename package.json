@@ -19,9 +19,12 @@
   "homepage": "https://github.com/MaxUbi/algorithm-js#readme",
   "dependencies": {
     "csv": "^0.4.6",
+    "jsonfile": "^2.2.3",
     "mocha": "^2.3.4",
+    "node-csv": "git+https://github.com/voodootikigod/node-csv.git",
     "node-svm": "^2.1.6",
     "q": "^1.4.1",
-    "should": "^7.1.1"
+    "should": "^7.1.1",
+    "touch": "^1.0.0"
   }
 }
