@@ -1,0 +1,27 @@
+{
+  "name": "js-algorithm",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxUbi/algorithm-js.git"
+  },
+  "author": "Xinyu Zhang",
+  "license": "ISC",
+  "private": "true",
+  "bugs": {
+    "url": "https://github.com/MaxUbi/algorithm-js/issues"
+  },
+  "homepage": "https://github.com/MaxUbi/algorithm-js#readme",
+  "dependencies": {
+    "csv": "^0.4.6",
+    "mocha": "^2.3.4",
+    "node-svm": "^2.1.6",
+    "q": "^1.4.1",
+    "should": "^7.1.1"
+  }
+}
