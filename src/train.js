@@ -1,7 +1,7 @@
 var path = require('path');
 var config = require('./config.js');
 var jsonfile = require('jsonfile');
-var mode = config.mode || 'correctness'; // correctness, all, develop
+var mode = process.env.DATA || config.mode || 'correctness'; // correctness, all, develop
 
 var train_file = path.join(config.data, mode + '_train_set.csv');
 var test_file = path.join(config.data, mode + '_test_set.csv');
@@ -24,11 +24,5 @@ olf.train(train_data)
     .done(function(model,report) {
         console.log("Training Finished");
         jsonfile.writeFileSync(model_file, model);
-        jsonfile.writeFileSync(report_file, report);
-        
-        return olf.evaluate(test_data)
-            .then(function(report) {
-            console.log("Evaluating Finished");
-            console.log(report);
-        });
+        jsonfile.writeFileSync(report_file, report);        
     });

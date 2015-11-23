@@ -10,7 +10,7 @@ var c  = {
     data:path.join(__dirname,'../Data/'),
     sit:0,
     stand:1,
-    mode:'correctness'
+    mode: 'correctness'// 'correctness'
 };
 
 module.exports = c;

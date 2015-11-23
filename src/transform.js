@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var config = require('./config.js');
 var jsonfile = require('jsonfile');
-var mode = config.mode || 'correctness'; // correctness, all, develop
+var mode = process.env.DATA || config.mode || 'correctness'; // correctness, all, develop
 
 var train_file = path.join(config.data, mode + '_train_set.csv');
 var test_file = path.join(config.data, mode + '_test_set.csv');
