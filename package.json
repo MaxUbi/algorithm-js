@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+      "test": "mocha",
+      "parse_data":"node ./src/transform.js",
+      "train":"node ./src/train.js"      
   },
   "repository": {
     "type": "git",
