@@ -21,5 +21,6 @@ module.exports = {
     },
     addStand: function(v) {
         return option.add(v, c.stand);
-    }
+    },
+    noop:function(){}
 };

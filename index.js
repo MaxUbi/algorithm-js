@@ -1,1 +1,1 @@
-module.exports = exports = require("./src/algorithm.js");
+module.exports = exports = require("./src/algorithm/algorithm.js");
