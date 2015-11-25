@@ -21,7 +21,6 @@
   },
   "author": "Xinyu Zhang",
   "license": "ISC",
-  "private": "true",
   "bugs": {
     "url": "https://github.com/MaxUbi/algorithm-js/issues"
   },
