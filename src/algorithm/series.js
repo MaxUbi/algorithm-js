@@ -1,12 +1,13 @@
 var config = require('./config.js'),
     util = require('./util.js');
 
-var FrameRate = config.setPointsPerSecond;
+
 
 // stat.stand  bool
 // stat.headPitch  number
 // stat.bodyTwist  number
 function series(gestures) {
+    var FrameRate = config.pointsPerSecond;
     var r = [];
     var bt = 0,
         hp = 0,
