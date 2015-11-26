@@ -16,6 +16,8 @@ function series(gestures) {
         var v = gestures[i];        
         if(util.hasHeadPitch(v)){
             hp += 1;
+            bt = 0;
+            st = 0;
             if(hp>= FrameRate){
                 r.push(config.headPitch);
                 hp = 0;
@@ -23,6 +25,8 @@ function series(gestures) {
         }
         if(util.hasBodyTwist(v)){
             bt += 1;
+            hp = 0;
+            st = 0;
             if(bt>= FrameRate){
                 r.push(config.bodyTwist);
                 bt = 0;
@@ -30,6 +34,8 @@ function series(gestures) {
         }
         if(util.isStand(v)){
             st += 1;
+            hp = 0;
+            bt = 0;
             if(st>= FrameRate){
                 r.push(config.stand);
                 st = 0;
