@@ -16,7 +16,7 @@ function score(gestures) {
             r.score += config.bodyTwistScore;
             break;
         case config.stand:
-            r.score = 0;
+            r.score = r.score/2;
             r.break = true;
             break;
         }
