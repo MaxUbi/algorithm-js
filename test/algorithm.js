@@ -14,7 +14,7 @@ var algorithm = require('../');
 
 algorithm.FrameRate(1);
 
-var sliceSize = 30;
+var sliceSize = 100;
 var total = 0;
 
 

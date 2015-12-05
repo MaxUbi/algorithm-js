@@ -16,7 +16,7 @@ var algorithm = function(points, cb) {
         .then(series)
         .then(score)
         .then(function(r){            
-            cb(null, r.score,r.break);
+            cb(null, 100 - r.score,r.break);
             return r;
         })
         .fail(function(err) {
