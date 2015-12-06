@@ -13,6 +13,12 @@ module.exports = {
     isStand: function(v) {
         return option.has(v, c.stand);
     },
+    isLean: function(v) {
+        return option.has(v, c.lean);
+    },
+    addLean: function(v) {
+        return option.add(v, c.lean);
+    },
     addHeadPitch: function(v) {
         return option.add(v, c.head_pitch);
     },

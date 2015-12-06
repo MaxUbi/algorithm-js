@@ -1,6 +1,9 @@
 var Threshold = {
     HeadPitch: -10,
-    BodyTwist: 15
+    BodyTwistPos: 15,
+    BodyTwistNeg:-15,
+    LeanPos:10,
+    LeanNeg:-10
 };
 
 
@@ -21,12 +24,21 @@ var body_twist = function(point) {
     var X = point.shoulder_right.x - point.shoulder_left.x;
     var r = Math.sqrt(X ^ 2 + Y ^ 2 + Z ^ 2);
     var facing = Math.acos(Z / r) * 180 / Math.PI - 90;
-    return facing <= -Threshold.BodyTwist ||
-        facing >= Threshold.BodyTwist;
+    return facing <= Threshold.BodyTwistNeg ||
+        facing >= Threshold.BodyTwistPos;
+};
+
+var lean = function(point){
+    var Y = point.shoulder.y - point.hip_center.y;
+    var X = point.shoulder.x - point.hip_center.x;
+    var angle = Math.atan(X/Y) * 180 / Math.PI;
+    console.log("lean angle = ", angle);
+    return angle <= Threshold.LeanNeg || angle >= Threshold.LeanPos;
 };
 
 
 module.exports = {
     isHeadPitch: head_pitch,
-    isBodyTwist: body_twist
+    isBodyTwist: body_twist,
+    isLean:lean
 };

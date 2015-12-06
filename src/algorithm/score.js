@@ -19,6 +19,9 @@ function score(gestures) {
             r.score = r.score/2;
             r.break = true;
             break;
+        case config.lean:
+            r.score += config.leanScore;
+            break;
         }
     });        
     return r;

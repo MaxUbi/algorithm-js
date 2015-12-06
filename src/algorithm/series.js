@@ -21,6 +21,9 @@ function series(gestures) {
         if(util.isStand(v)){
                 r.push(config.stand);
         }
+        if(util.isLean(v)){
+            r.push(config.lean);
+        }
     }
     return r;    
 };

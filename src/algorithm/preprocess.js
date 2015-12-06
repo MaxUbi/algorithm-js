@@ -16,6 +16,9 @@ module.exports = exports = function(arr){
         if(angle.isBodyTwist(a)){
             v = util.addBodyTwist(v);
         }
+        if(angle.isLean(a)){
+            v = util.addLean(v);
+        }        
         if(!svm.isSit(a)){
             v = util.addStand(v);
         }        

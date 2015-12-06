@@ -4,6 +4,7 @@ var c  = {
     constant:{
         head_pitch:2,
         body_twist:4,
+        lean:8,
         sit:0,
         stand:1
     },
